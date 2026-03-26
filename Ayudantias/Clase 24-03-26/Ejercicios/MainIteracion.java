@@ -36,6 +36,21 @@ public class MainIteracion {
         int exponente = scanner.nextInt();
 
         System.out.println("La pontencia de " + base + " elevado a la " + exponente + " es: " + EjerciciosIterativos.potencia(base, exponente));
+        
+        //Obtener el valor que se contiene en el i-ésimo índice de un array
+        // Definir un array de enteros
+        int[] numeros = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+
+        System.out.print("Introduce el índice del array (0 a " + (numeros.length - 1) + "): ");
+        int indice = scanner.nextInt();
+
+        int resultado = EjerciciosIterativos.buscarIndice(numeros, indice);
+
+        if (resultado != -1) {
+            System.out.println("El valor en el índice " + indice + " es: " + resultado);
+        } else {
+            System.out.println("Índice fuera de los límites del array.");
+        }
 
         scanner.close();
     }

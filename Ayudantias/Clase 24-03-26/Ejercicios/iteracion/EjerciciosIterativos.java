@@ -73,5 +73,23 @@ public class EjerciciosIterativos {
 
         return pow;
     }
+
+    /**
+     * Busca el valor en un índice específico de un arreglo de enteros.
+     * @param array El arreglo de enteros donde se buscará el índice.
+     * @param indice El índice que se desea buscar en el arreglo.
+     * @return El valor en el índice solicitado si es válido; de lo contrario, retorna -1.
+     */
+    public static int buscarIndice(int[] array, int indice) {
+        if (indice >= 0 && indice < array.length) {
+            for (int i = 0; i < array.length; i++) {
+                if (i == indice) {
+                    return array[i]; // Retornar el valor en el índice solicitado
+                }
+            }
+        }
+        // Retornar un valor especial si el índice está fuera de los límites
+        return -1; 
+    }
     
 }
